@@ -1,0 +1,63 @@
+html, body, .capa {
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    overflow: hidden;
+}
+
+.parallax {
+    background-image: url('../imagens/2.jpg');
+    filter: blur(5px);
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#menu {
+    position: relative;
+    text-align: center;
+    margin: -44% auto;
+    background: black;
+    opacity: 0.9;
+}
+
+#menu ul {
+    margin:0px 0px 0px 45%;
+    list-style:none;
+}
+
+#menu ul li { 
+    display: inline; 
+}
+
+#menu ul li a {
+    padding: 25px 15px;
+    display: inline-block;
+    color: rgb(204, 204, 204);
+    text-decoration: none;
+}
+
+#menu ul li a:hover {
+    color: rgb(138, 138, 138);
+}
+
+.capa {
+    text-align: center;
+    position: relative;
+    margin: 60% auto;
+    width: 800px;
+    color: aliceblue;
+}
