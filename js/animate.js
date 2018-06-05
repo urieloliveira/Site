@@ -18,15 +18,31 @@ typeWriter(titulo);
 
 setTimeout(() => document.querySelector('h5').classList.add("animateSurgir"), 3330);
 
- function mudaTamanho(){
+
+function scrollProgress(){
     var qtd = (document.getElementById('habilidades-content').children.length)/2;
     for(var i = 0; i < qtd; i++){
-        var tam = (document.getElementsByClassName("porcentagem")[i].innerHTML)/100;
-        document.getElementsByClassName("barra")[i].style.width = `${635*tam}px`;
+        progressBar();
+        function progressBar(){
+            var tam = (document.getElementsByClassName("porcentagem")[i].innerHTML)*635/100;
+            var elemento = document.getElementsByClassName("barra")[i];
+            var width = 1;
+            var id = setInterval(frame, 0);
+            function frame(){
+                if (width >= tam) {
+                    clearInterval(id);
+                } else {
+                    width++;
+                    elemento.style.width = `${width}px`;
+                    document.getElementsByClassName("porcentagem")[i].style.opacity = "1";
+                }
+            }
+        }
     }
-    console.log(qtd);
+    
 }
 
-mudaTamanho(); 
+scrollProgress();
+
 
 
